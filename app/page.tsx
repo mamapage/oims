@@ -128,10 +128,13 @@ export default function Home() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featureCards.map((card) => (
-              <div key={card.title} className="glass gold-border rounded-2xl p-6 shadow-glass">
-                <div className="mb-4 h-10 w-10 rounded-full bg-gold/20" />
+              <div key={card.title} className="glass gold-border rounded-2xl p-6 shadow-glass feature-card">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="feature-bullet" />
+                  <span className="text-xs uppercase tracking-[0.3em] text-gold">Key Advantage</span>
+                </div>
                 <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
-                <p className="text-sm text-ivory/75">{card.body}</p>
+                <p className="text-sm text-ivory/80">{card.body}</p>
               </div>
             ))}
           </div>
