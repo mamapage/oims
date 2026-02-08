@@ -39,7 +39,7 @@ export default function Home() {
   });
   const whatsappLink =
     "https://wa.me/919083424697?text=I%20want%20to%20apply%20for%202026%20admission.%20Please%20share%20details.";
-  const brochureLink = "/brochure.pdf";
+  const brochureLink = "/brochure.jpg";
   const canSubmit =
     form.name.trim() &&
     form.address.trim() &&
@@ -71,10 +71,9 @@ export default function Home() {
 
       <section className="relative overflow-hidden">
         <div className="hero-video">
-          <video autoPlay muted loop playsInline poster="/hero-poster.svg" className="opacity-70">
+          <video autoPlay muted loop playsInline className="opacity-70">
             <source src="/hero-campus.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-[url('/hero-campus.svg')] bg-cover bg-center opacity-30" />
         </div>
         <div className="absolute inset-0 bg-hero-radial" />
         <div className="relative container flex min-h-[70vh] flex-col justify-center gap-6 py-16">
