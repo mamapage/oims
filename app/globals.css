@@ -124,6 +124,39 @@ video {
   border: 1px solid rgba(247, 249, 252, 0.2);
 }
 
+.select-dark option {
+  color: #0b1226;
+  background: #f7f9fc;
+}
+
+.course-bba {
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.35), rgba(255, 255, 255, 0.08));
+}
+
+.course-bca {
+  background: linear-gradient(135deg, rgba(64, 156, 255, 0.35), rgba(255, 255, 255, 0.08));
+}
+
+.course-bhm {
+  background: linear-gradient(135deg, rgba(255, 122, 89, 0.35), rgba(255, 255, 255, 0.08));
+}
+
+.course-bttm {
+  background: linear-gradient(135deg, rgba(40, 200, 140, 0.35), rgba(255, 255, 255, 0.08));
+}
+
+.course-mapmir {
+  background: linear-gradient(135deg, rgba(168, 99, 255, 0.35), rgba(255, 255, 255, 0.08));
+}
+
+.course-mfc {
+  background: linear-gradient(135deg, rgba(240, 200, 80, 0.35), rgba(255, 255, 255, 0.08));
+}
+
+.course-llb {
+  background: linear-gradient(135deg, rgba(120, 200, 255, 0.35), rgba(255, 255, 255, 0.08));
+}
+
 @media (max-width: 768px) {
   .section-pad {
     padding: 3.5rem 1.25rem;
