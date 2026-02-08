@@ -56,7 +56,7 @@ export default function Home() {
       <header className="relative z-10">
         <div className="container flex flex-col gap-4 py-6 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
-            <img src="/logo-oims.svg" alt="OIMS Logo" className="h-14 w-14" />
+            <img src="/logo-oims.jpg" alt="OIMS Logo" className="h-14 w-14" />
             <div>
               <p className="font-serif text-2xl tracking-wide">The Oxford Institute of Management and Studies</p>
               <p className="muted text-sm">The Newton College of Management</p>
@@ -286,8 +286,8 @@ export default function Home() {
       </a>
 
       {open ? (
-        <div className="fixed inset-0 z-30 flex items-center justify-center bg-black/60 px-4">
-          <div className="glass gold-border w-full max-w-lg rounded-3xl p-8">
+        <div className="fixed inset-0 z-30 flex items-start md:items-center justify-center bg-black/60 px-4 py-6">
+          <div className="glass gold-border w-full max-w-md md:max-w-lg max-h-[80vh] overflow-y-auto rounded-3xl p-6 md:p-8">
             <div className="flex items-start justify-between">
               <div>
                 <p className="text-sm uppercase tracking-[0.3em] text-gold">Apply Now</p>
