@@ -12,13 +12,13 @@ const featureCards = [
 ];
 
 const courses = [
-  { title: "BBA", subtitle: "Bachelor of Business Administration" },
-  { title: "BCA", subtitle: "Bachelor of Computer Application" },
-  { title: "BHM", subtitle: "Bachelor of Hotel Management", highlight: "Placement in 18 Months" },
-  { title: "BTTM", subtitle: "Tourism and Travel Management" },
-  { title: "MA-PMIR", subtitle: "Personal Management and Industrial Relations" },
-  { title: "MFC", subtitle: "Master of Finance and Control" },
-  { title: "LLB", subtitle: "Law" },
+  { title: "BBA", subtitle: "Bachelor of Business Administration", imageClass: "course-bba" },
+  { title: "BCA", subtitle: "Bachelor of Computer Application", imageClass: "course-bca" },
+  { title: "BHM", subtitle: "Bachelor of Hotel Management", highlight: "Placement in 18 Months", imageClass: "course-bhm" },
+  { title: "BTTM", subtitle: "Tourism and Travel Management", imageClass: "course-bttm" },
+  { title: "MA-PMIR", subtitle: "Personal Management and Industrial Relations", imageClass: "course-mapmir" },
+  { title: "MFC", subtitle: "Master of Finance and Control", imageClass: "course-mfc" },
+  { title: "LLB", subtitle: "Law", imageClass: "course-llb" },
 ];
 
 const partners = ["Infosys", "TCS", "HDFC Bank", "Axis Bank", "Birla Group", "Emami Group", "Mayfair Group"];
@@ -56,7 +56,7 @@ export default function Home() {
       <header className="relative z-10">
         <div className="container flex flex-col gap-4 py-6 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
-            <img src="/logo-oims.jpg" alt="OIMS Logo" className="h-14 w-14" />
+            <img src="/logo-oims.jpg" alt="OIMS Logo" className="h-20 w-20 md:h-24 md:w-24" />
             <div>
               <p className="font-serif text-2xl tracking-wide">The Oxford Institute of Management and Studies</p>
               <p className="muted text-sm">The Newton College of Management</p>
@@ -148,7 +148,7 @@ export default function Home() {
           <div className="flex gap-6 overflow-x-auto pb-4" style={{ scrollSnapType: "x mandatory" }}>
             {courses.map((course) => (
               <div key={course.title} className="glass gold-border min-w-[260px] snap-start rounded-2xl p-5">
-                <div className="mb-4 h-36 rounded-xl bg-white/10" />
+                <div className={`mb-4 h-36 rounded-xl bg-white/10 ${course.imageClass}`} />
                 <p className="text-sm uppercase tracking-[0.3em] text-gold">{course.title}</p>
                 <h3 className="mt-2 text-lg font-semibold">{course.subtitle}</h3>
                 {course.highlight ? <p className="mt-3 text-sm text-gold">{course.highlight}</p> : null}
@@ -373,7 +373,7 @@ export default function Home() {
                 onChange={(event) => setForm((prev) => ({ ...prev, percentage: event.target.value }))}
               />
               <select
-                className="field w-full rounded-full px-4 py-3 text-sm text-ivory"
+                className="field w-full rounded-full px-4 py-3 text-sm text-ivory select-dark"
                 value={form.course}
                 onChange={(event) => setForm((prev) => ({ ...prev, course: event.target.value }))}
               >
