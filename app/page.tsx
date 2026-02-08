@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 const featureCards = [
-  { title: "Hybrid Learning", body: "Morning and evening online classes for flexible schedules." },
-  { title: "Tech-Forward Curriculum", body: "AI, Cyber Security, Digital Marketing, and Data Science." },
-  { title: "Evaluation System", body: "Weekly tracking and monthly inter-college assessments." },
-  { title: "Student Incentives", body: "Free laptop and programming courses for new admits." },
-  { title: "Results Focus", body: "Guaranteed semester promotion with 75% attendance." },
-  { title: "Exam Excellence", body: "Competitive exam coaching with structured revision." },
+  { title: "Hybrid Learning Advantage", body: "Morning and evening online classes built for ambitious schedules." },
+  { title: "Future-Skill Curriculum", body: "AI, Cyber Security, Digital Marketing, and Data Science integrated." },
+  { title: "Performance Dashboard", body: "Weekly tracking with monthly inter-college assessments." },
+  { title: "Fast-Track Incentives", body: "Free laptop and programming courses for new admits." },
+  { title: "Guaranteed Promotion", body: "Semester promotion with 75% attendance requirement." },
+  { title: "Exam Mastery", body: "Competitive exam coaching with structured revision support." },
 ];
 
 const courses = [
@@ -62,7 +62,7 @@ export default function Home() {
               <p className="muted text-sm">The Newton College of Management</p>
             </div>
           </div>
-          <div className="flex items-center gap-3 text-sm uppercase tracking-widest">
+          <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] md:text-sm md:tracking-widest">
             <span className="badge px-3 py-1">Affiliated with</span>
             <span className="text-xs md:text-sm">Utkal University / North Odisha University</span>
           </div>
@@ -78,9 +78,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-hero-radial" />
         <div className="relative container flex min-h-[70vh] flex-col justify-center gap-6 py-16">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 px-4 py-1 text-xs uppercase tracking-[0.3em]">
-            Corporate Ivy League Education
+            The Oxford Institute of Management and Studies
           </div>
-          <h1 className="max-w-3xl font-serif text-4xl md:text-6xl">
+          <h1 className="max-w-3xl font-serif text-4xl leading-tight md:text-6xl md:leading-tight">
             Step into a World of Excellence and Career-Ready Education.
           </h1>
           <p className="max-w-2xl text-lg text-ivory/80">
@@ -146,7 +146,7 @@ export default function Home() {
           </div>
           <div className="flex gap-6 overflow-x-auto pb-4" style={{ scrollSnapType: "x mandatory" }}>
             {courses.map((course) => (
-              <div key={course.title} className="glass gold-border min-w-[260px] snap-start rounded-2xl p-5">
+              <div key={course.title} className="glass gold-border min-w-[220px] sm:min-w-[260px] snap-start rounded-2xl p-5">
                 <div className={`mb-4 h-36 rounded-xl bg-white/10 ${course.imageClass}`} />
                 <p className="text-sm uppercase tracking-[0.3em] text-gold">{course.title}</p>
                 <h3 className="mt-2 text-lg font-semibold">{course.subtitle}</h3>
@@ -264,7 +264,7 @@ export default function Home() {
       <footer className="border-t border-white/10 py-8">
         <div className="container flex flex-col gap-4 text-sm text-ivory/60 md:flex-row md:items-center md:justify-between">
           <span>© 2026 The Oxford Institute of Management and Studies</span>
-          <span>Corporate Ivy League Education with Career-Ready Outcomes</span>
+          <span>The Oxford Institute of Management and Studies</span>
         </div>
       </footer>
 
