@@ -120,6 +120,25 @@ video {
   color: #f2e2b5;
 }
 
+.feature-card {
+  position: relative;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 162, 39, 0.7);
+  box-shadow: 0 16px 40px rgba(8, 18, 34, 0.45);
+}
+
+.feature-bullet {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #f7e3a3, #c9a227 60%, #8b6b12 100%);
+  box-shadow: 0 0 12px rgba(201, 162, 39, 0.6);
+}
+
 .field {
   background: rgba(247, 249, 252, 0.08);
   border: 1px solid rgba(247, 249, 252, 0.2);
