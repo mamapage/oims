@@ -159,14 +159,14 @@ export default function Home() {
       </section>
 
       <section className="section-pad bg-navy2">
-        <div className="container grid gap-10 lg:grid-cols-[1fr_0.9fr]">
-          <div>
+        <div className="container grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.3em] text-gold">Placements and Partners</p>
             <h2 className="mt-3 font-serif text-3xl md:text-4xl">Your Gateway to Global Brands.</h2>
             <p className="mt-4 max-w-xl text-ivory/70">
               Placement mentorship, corporate readiness, and premium hiring networks to maximize career outcomes.
             </p>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 max-w-xl">
               <div className="glass gold-border rounded-2xl p-6">
                 <p className="text-4xl font-semibold text-gold">100%</p>
                 <p className="text-sm text-ivory/70">Placement Assistance</p>
