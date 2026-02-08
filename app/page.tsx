@@ -26,11 +26,30 @@ const partners = ["Infosys", "TCS", "HDFC Bank", "Axis Bank", "Birla Group", "Em
 export default function Home() {
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-  const [form, setForm] = useState({ name: "", phone: "", course: "" });
+  const [form, setForm] = useState({
+    name: "",
+    address: "",
+    phone: "",
+    lastExam: "",
+    marks: "",
+    percentage: "",
+    course: "",
+    terms: false,
+    kyc: "",
+  });
   const whatsappLink =
     "https://wa.me/919083424697?text=I%20want%20to%20apply%20for%202026%20admission.%20Please%20share%20details.";
   const brochureLink = "/brochure.pdf";
-  const canSubmit = form.name.trim() && form.phone.trim() && form.course.trim();
+  const canSubmit =
+    form.name.trim() &&
+    form.address.trim() &&
+    form.phone.trim() &&
+    form.lastExam.trim() &&
+    form.marks.trim() &&
+    form.percentage.trim() &&
+    form.course.trim() &&
+    form.kyc.trim() &&
+    form.terms;
 
   return (
     <div className="bg-navy text-ivory">
@@ -200,14 +219,13 @@ export default function Home() {
               <span className="badge rounded-full px-4 py-2 text-xs">5% Early Bird Scholarship</span>
               <span className="badge rounded-full px-4 py-2 text-xs">Flexible Learning Slots</span>
             </div>
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-primary mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-3 font-semibold"
+            <button
+              type="button"
+              onClick={() => setOpen(true)}
+              className="btn-primary mt-10 inline-flex w-full items-center justify-center rounded-full px-6 py-3 font-semibold"
             >
               Start Your Application
-            </a>
+            </button>
           </div>
           <div className="grid gap-6">
             <div className="glass gold-border rounded-3xl p-8">
@@ -289,14 +307,30 @@ export default function Home() {
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                       name: form.name,
+                      address: form.address,
                       phone: form.phone,
+                      lastExam: form.lastExam,
+                      marks: form.marks,
+                      percentage: form.percentage,
                       course: form.course,
+                      terms: form.terms,
+                      kyc: form.kyc,
                       source: "Website Form",
                     }),
                   });
                   if (!res.ok) throw new Error("Failed");
                   setStatus("success");
-                  setForm({ name: "", phone: "", course: "" });
+                  setForm({
+                    name: "",
+                    address: "",
+                    phone: "",
+                    lastExam: "",
+                    marks: "",
+                    percentage: "",
+                    course: "",
+                    terms: false,
+                    kyc: "",
+                  });
                 } catch {
                   setStatus("error");
                 }
@@ -310,15 +344,61 @@ export default function Home() {
               />
               <input
                 className="field w-full rounded-full px-4 py-3 text-sm"
-                placeholder="Phone Number"
+                placeholder="Full Address"
+                value={form.address}
+                onChange={(event) => setForm((prev) => ({ ...prev, address: event.target.value }))}
+              />
+              <input
+                className="field w-full rounded-full px-4 py-3 text-sm"
+                placeholder="Contact Number"
                 value={form.phone}
                 onChange={(event) => setForm((prev) => ({ ...prev, phone: event.target.value }))}
               />
               <input
                 className="field w-full rounded-full px-4 py-3 text-sm"
-                placeholder="Course Interest"
+                placeholder="Last Passed Exam"
+                value={form.lastExam}
+                onChange={(event) => setForm((prev) => ({ ...prev, lastExam: event.target.value }))}
+              />
+              <input
+                className="field w-full rounded-full px-4 py-3 text-sm"
+                placeholder="Marks Obtained"
+                value={form.marks}
+                onChange={(event) => setForm((prev) => ({ ...prev, marks: event.target.value }))}
+              />
+              <input
+                className="field w-full rounded-full px-4 py-3 text-sm"
+                placeholder="Percentage"
+                value={form.percentage}
+                onChange={(event) => setForm((prev) => ({ ...prev, percentage: event.target.value }))}
+              />
+              <select
+                className="field w-full rounded-full px-4 py-3 text-sm text-ivory"
                 value={form.course}
                 onChange={(event) => setForm((prev) => ({ ...prev, course: event.target.value }))}
+              >
+                <option value="">Select Course</option>
+                <option value="BBA">BBA - Bachelor of Business Administration</option>
+                <option value="BCA">BCA - Bachelor of Computer Application</option>
+                <option value="BHM">BHM - Bachelor of Hotel Management</option>
+                <option value="BTTM">BTTM - Tourism and Travel Management</option>
+                <option value="MA-PMIR">MA-PMIR - Personal Management and Industrial Relations</option>
+                <option value="MFC">MFC - Master of Finance and Control</option>
+                <option value="LLB">LLB - Law</option>
+              </select>
+              <label className="flex items-center gap-3 text-sm text-ivory/80">
+                <input
+                  type="checkbox"
+                  checked={form.terms}
+                  onChange={(event) => setForm((prev) => ({ ...prev, terms: event.target.checked }))}
+                />
+                I agree to the Terms and Conditions.
+              </label>
+              <input
+                className="field w-full rounded-full px-4 py-3 text-sm"
+                placeholder="KYC ID (Aadhaar / PAN / Voter ID)"
+                value={form.kyc}
+                onChange={(event) => setForm((prev) => ({ ...prev, kyc: event.target.value }))}
               />
               <button
                 type="submit"
