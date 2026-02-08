@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0b1226;
+  --navy: #0b1c3a;
+  --navy-2: #122646;
+  --gold: #c9a227;
+  --ivory: #f7f9fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ivory);
+  background: var(--navy);
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.gold-border {
+  border: 1px solid rgba(201, 162, 39, 0.45);
+}
+
+.section-pad {
+  padding: 5rem 1.5rem;
+}
+
+.container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.ticker-mask {
+  overflow: hidden;
+  border-top: 1px solid rgba(201, 162, 39, 0.3);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.3);
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+}
+
+.parallax-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(11, 28, 58, 0.75), rgba(11, 28, 58, 0.3));
+}
+
+.hero-gradient {
+  background-image: linear-gradient(120deg, rgba(11, 28, 58, 0.95), rgba(11, 28, 58, 0.65)), var(--hero-media, none);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.muted {
+  color: rgba(247, 249, 252, 0.75);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #e0b84b, #c9a227);
+  color: #0b1226;
+}
+
+.btn-outline {
+  border: 1px solid rgba(247, 249, 252, 0.4);
+}
+
+.badge {
+  background: rgba(201, 162, 39, 0.15);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  color: #f2e2b5;
+}
+
+.field {
+  background: rgba(247, 249, 252, 0.08);
+  border: 1px solid rgba(247, 249, 252, 0.2);
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding: 3.5rem 1.25rem;
+  }
+}
