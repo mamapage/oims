@@ -159,7 +159,7 @@ export default function Home() {
       </section>
 
       <section className="section-pad bg-navy2">
-        <div className="container grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="container grid gap-10 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-gold">Placements and Partners</p>
             <h2 className="mt-3 font-serif text-3xl md:text-4xl">Your Gateway to Global Brands.</h2>
@@ -184,7 +184,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="glass gold-border relative rounded-3xl p-8">
+          <div className="glass gold-border relative rounded-3xl p-6 md:p-8 max-w-xl lg:max-w-none justify-self-center lg:justify-self-auto">
             <p className="text-sm uppercase tracking-[0.3em] text-gold">Road to Success</p>
             <h3 className="mt-3 font-serif text-2xl">A corporate ladder built for achievers.</h3>
             <div className="mt-8 space-y-4">
