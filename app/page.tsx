@@ -162,13 +162,13 @@ export default function Home() {
 
       <section className="section-pad bg-navy2">
         <div className="container grid gap-10 lg:grid-cols-2 lg:items-start">
-          <div className="max-w-2xl">
+          <div className="w-full max-w-none">
             <p className="text-sm uppercase tracking-[0.3em] text-gold">Placements and Partners</p>
             <h2 className="mt-3 font-serif text-3xl md:text-4xl">Your Gateway to Global Brands.</h2>
             <p className="mt-4 max-w-xl text-ivory/70">
               Placement mentorship, corporate readiness, and premium hiring networks to maximize career outcomes.
             </p>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 max-w-xl">
+            <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <div className="glass gold-border rounded-2xl p-6">
                 <p className="text-4xl font-semibold text-gold">100%</p>
                 <p className="text-sm text-ivory/70">Placement Assistance</p>
@@ -186,7 +186,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="glass gold-border relative rounded-3xl p-6 md:p-8 max-w-xl lg:max-w-none justify-self-center lg:justify-self-auto">
+          <div className="glass gold-border relative rounded-3xl p-6 md:p-8 w-full max-w-none justify-self-center lg:justify-self-auto">
             <p className="text-sm uppercase tracking-[0.3em] text-gold">Road to Success</p>
             <h3 className="mt-3 font-serif text-2xl">A corporate ladder built for achievers.</h3>
             <div className="mt-8 space-y-4">
@@ -288,8 +288,8 @@ export default function Home() {
       </a>
 
       {open ? (
-        <div className="fixed inset-0 z-30 flex items-start md:items-center justify-center bg-black/60 px-4 py-6">
-          <div className="glass gold-border w-full max-w-md md:max-w-lg max-h-[80vh] overflow-y-auto rounded-3xl p-6 md:p-8">
+        <div className="fixed inset-0 z-30 flex items-start md:items-center justify-center bg-black/60 px-3 py-4 sm:px-4 sm:py-6">
+          <div className="glass gold-border w-full max-w-md md:max-w-lg max-h-[85vh] overflow-y-auto rounded-3xl p-5 sm:p-6 md:p-8">
             <div className="flex items-start justify-between">
               <div>
                 <p className="text-sm uppercase tracking-[0.3em] text-gold">Apply Now</p>
@@ -339,43 +339,43 @@ export default function Home() {
               }}
             >
               <input
-                className="field w-full rounded-full px-4 py-3 text-sm"
+                className="field w-full rounded-full px-4 py-2.5 text-sm sm:py-3"
                 placeholder="Full Name"
                 value={form.name}
                 onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
               />
               <input
-                className="field w-full rounded-full px-4 py-3 text-sm"
+                className="field w-full rounded-full px-4 py-2.5 text-sm sm:py-3"
                 placeholder="Full Address"
                 value={form.address}
                 onChange={(event) => setForm((prev) => ({ ...prev, address: event.target.value }))}
               />
               <input
-                className="field w-full rounded-full px-4 py-3 text-sm"
+                className="field w-full rounded-full px-4 py-2.5 text-sm sm:py-3"
                 placeholder="Contact Number"
                 value={form.phone}
                 onChange={(event) => setForm((prev) => ({ ...prev, phone: event.target.value }))}
               />
               <input
-                className="field w-full rounded-full px-4 py-3 text-sm"
+                className="field w-full rounded-full px-4 py-2.5 text-sm sm:py-3"
                 placeholder="Last Passed Exam"
                 value={form.lastExam}
                 onChange={(event) => setForm((prev) => ({ ...prev, lastExam: event.target.value }))}
               />
               <input
-                className="field w-full rounded-full px-4 py-3 text-sm"
+                className="field w-full rounded-full px-4 py-2.5 text-sm sm:py-3"
                 placeholder="Marks Obtained"
                 value={form.marks}
                 onChange={(event) => setForm((prev) => ({ ...prev, marks: event.target.value }))}
               />
               <input
-                className="field w-full rounded-full px-4 py-3 text-sm"
+                className="field w-full rounded-full px-4 py-2.5 text-sm sm:py-3"
                 placeholder="Percentage"
                 value={form.percentage}
                 onChange={(event) => setForm((prev) => ({ ...prev, percentage: event.target.value }))}
               />
               <select
-                className="field w-full rounded-full px-4 py-3 text-sm text-ivory select-dark"
+                className="field w-full rounded-full px-4 py-2.5 text-sm sm:py-3 text-ivory select-dark"
                 value={form.course}
                 onChange={(event) => setForm((prev) => ({ ...prev, course: event.target.value }))}
               >
@@ -397,7 +397,7 @@ export default function Home() {
                 I agree to the Terms and Conditions.
               </label>
               <input
-                className="field w-full rounded-full px-4 py-3 text-sm"
+                className="field w-full rounded-full px-4 py-2.5 text-sm sm:py-3"
                 placeholder="KYC ID (Aadhaar / PAN / Voter ID)"
                 value={form.kyc}
                 onChange={(event) => setForm((prev) => ({ ...prev, kyc: event.target.value }))}
